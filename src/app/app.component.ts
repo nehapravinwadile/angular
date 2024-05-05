@@ -1,13 +1,33 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true // Add this line to mark the component as standalone
 })
 export class AppComponent {
-  title = 'assignment-2c';
+  title = 'Registration Form';
+  displayname = '';
+  displayaddress = '';
+  displaycontact = '';
+  displayemail = '';
+
+  getValue(name: string, address: string, contact: string, email: string) {
+    this.displayname = name;
+    this.displayaddress = address;
+    this.displaycontact = contact;
+    this.displayemail = email;
+  }
 }
+
+
+  // npm --version
+  // npm install -g @angular/cli@latest
+  // cd part-c
+  // ng serve
+
+  // if error
+
+  // powershell(administrator)
+  // Set-ExecutionPolicy RemoteSigned
